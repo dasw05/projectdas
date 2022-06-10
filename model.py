@@ -2,7 +2,7 @@
 
 from keras.models import Model
 from keras.layers.core import Dense, Activation
-from tensorflow.keras.layers import Conv2D, MaxPooling2D
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Averagepooling2D
 
 from keras.layers.convolutional import SeparableConv2D
 from tensorflow.keras.layers import BatchNormalization
