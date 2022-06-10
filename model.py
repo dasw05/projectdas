@@ -1,8 +1,10 @@
 
 
+import keras
+import keras.utils
 from keras.models import Model
 from keras.layers.core import Dense, Activation
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, Averagepooling2D
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, AveragePooling2D
 
 from keras.layers.convolutional import SeparableConv2D
 from tensorflow.keras.layers import BatchNormalization
@@ -12,6 +14,14 @@ from keras.layers import Input, Flatten
 from keras.layers import DepthwiseConv2D
 from tensorflow.keras.constraints import max_norm
 from matplotlib import pyplot as plt
+
+import keras
+import keras.utils
+from keras import utils as np_utils
+
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation
+from tensorflow.keras.optimizers import SGD
 
 
 ###################################################################
