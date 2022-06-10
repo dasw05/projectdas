@@ -113,8 +113,9 @@ for num_classes in num_classes_list:
             for train, test in kf.split(X, y):
                 
                 # init model 
-                model = models.DeepConvNet(nb_classes = num_classes, Chans=n_ch, Samples=n_samples,
-                                dropoutRate=0.5)
+                model = models.EEGInception(input_time=1000, fs=128, ncha=8, filters_per_branch=8,
+                        scales_time=(500, 250, 125), dropout_rate=0.25,
+                         activation='elu', n_classes=2, learning_rate=0.001)
                
                 print(model.summary())
                 from keras.models import Sequential
