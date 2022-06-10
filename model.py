@@ -96,3 +96,4 @@ def EEGInception(input_time=1000, fs=128, ncha=8, filters_per_branch=8,
     # Output layer
     output_layer = Flatten()(b3_out)
     output_layer = Dense(n_classes, activation='softmax')(output_layer)
+    return Model(inputs=input_layer, outputs=output_layer)
