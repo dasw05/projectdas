@@ -117,13 +117,7 @@ for num_classes in num_classes_list:
                         scales_time=(500, 250, 125), dropout_rate=0.25,
                          activation='elu', n_classes=2, learning_rate=0.001)
                
-                print(model.summary())
-                from keras.models import Sequential
-                from keras.layers import Dense
-                from keras.utils.vis_utils import plot_model
-                
-                plot_model(model, to_file='model_plot.png', show_shapes=True, show_layer_names=True)
-
+              
                 # Set Learning Rate
                 adam_alpha = Adam(lr=(0.0001))
                 model.compile(loss='categorical_crossentropy', optimizer=adam_alpha, metrics = ['accuracy'])
